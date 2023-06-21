@@ -70,6 +70,11 @@ else:
         print(cadenajson[usuario])
         print(cadenajson[usuario]['px'])
         print(cadenajson[usuario]['py'])
+        lienzo.create_image(
+            cadenajson[usuario]['px'],
+            cadenajson[usuario]['py'],
+            image=mariquita,
+            anchor='nw')
 
 
 

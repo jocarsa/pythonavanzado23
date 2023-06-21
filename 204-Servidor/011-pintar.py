@@ -4,7 +4,7 @@ import json
 import requests
 
 
-
+otrospersonajes = {}
 class Personaje:
     def __init__(self):
         self.px = 20
@@ -70,6 +70,11 @@ else:
         print(cadenajson[usuario])
         print(cadenajson[usuario]['px'])
         print(cadenajson[usuario]['py'])
+        otrospersonajes[usuario] = lienzo.create_image(
+            cadenajson[usuario]['px'],
+            cadenajson[usuario]['py'],
+            image=mariquita,
+            anchor='nw')
 
 
 

@@ -2,9 +2,9 @@ import tkinter as tk
 from tkinter import *
 import json
 import requests
+import time
 
-
-
+otrospersonajes = {}
 class Personaje:
     def __init__(self):
         self.px = 20
@@ -28,11 +28,47 @@ def pulsaTecla(event):
     elif event.char == "d":
         print("derecha")
         lienzo.move(personaje, 10, 0)
+    elif event.char == "u":
+        bucle()
         
         
 
 def despulsaTecla(event):
     print("has despulsado una tecla "+event.char)
+
+urlstring = "http://192.168.1.74/?usuario=josevicente&px=30&py=40"
+def bucle():
+    try:
+        respuesta = requests.get(urlstring)
+        respuesta.raise_for_status()
+    except HTTPError as mierror:
+        print(mierror)
+    except Exception as errorpython:
+        print(errorpython)
+    else:
+        respuesta.encoding ='utf-8'
+        print(respuesta.text)
+        cadenajson = json.loads(respuesta.text)
+        print(cadenajson)
+        for usuario in cadenajson:
+            print(usuario)
+            
+            print(cadenajson[usuario])
+            print(cadenajson[usuario]['px'])
+            print(cadenajson[usuario]['py'])
+            if usuario in otrospersonajes:
+                lienzo.moveto(
+                    otrospersonajes[usuario],
+                    cadenajson[usuario]['px'],
+                    cadenajson[usuario]['py']
+                    )
+            else:
+                otrospersonajes[usuario] = lienzo.create_image(
+                    cadenajson[usuario]['px'],
+                    cadenajson[usuario]['py'],
+                    image=mariquita,
+                    anchor='nw')
+    
 
 raiz = tk.Tk()
 raiz.geometry("512x512")
@@ -50,27 +86,8 @@ raiz.bind("<KeyPress>", pulsaTecla)
 raiz.bind("<KeyRelease>", despulsaTecla)
 
 
-urlstring = "http://192.168.1.74/?usuario=josevicente&px=30&py=40"
 
-try:
-    respuesta = requests.get(urlstring)
-    respuesta.raise_for_status()
-except HTTPError as mierror:
-    print(mierror)
-except Exception as errorpython:
-    print(errorpython)
-else:
-    respuesta.encoding ='utf-8'
-    print(respuesta.text)
-    cadenajson = json.loads(respuesta.text)
-    print(cadenajson)
-    for usuario in cadenajson:
-        print(usuario)
-        
-        print(cadenajson[usuario])
-        print(cadenajson[usuario]['px'])
-        print(cadenajson[usuario]['py'])
-
+bucle()
 
 
 
