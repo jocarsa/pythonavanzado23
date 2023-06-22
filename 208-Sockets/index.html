@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSockets Client</title>
+</head>
+<body>
+    <input type="text" id="quieneres">
+  <input type="text" id="messageInput">
+  <button onclick="sendMessage()">Send</button>
+  <ul id="messages"></ul>
+
+  <script>
+    // Create a new WebSocket connection
+    const socket = new WebSocket('ws://192.168.1.74:8000');
+
+    // Handle received messages
+    socket.onmessage = function(event) {
+      const messageList = document.getElementById('messages');
+      const messageItem = document.createElement('li');
+      messageItem.textContent = event.data;
+        console.log(JSON.parse(event.data))
+      messageList.appendChild(messageItem);
+    };
+
+    // Send a message to the server
+    function sendMessage() {
+        const quieneres = document.getElementById('quieneres').value
+      const messageInput = document.getElementById('messageInput');
+      const message = messageInput.value;
+      socket.send(JSON.stringify({"quien":quieneres,"mensaje":message,"color":"rojo"}));
+      messageInput.value = '';
+    }
+  </script>
+</body>
+</html>
