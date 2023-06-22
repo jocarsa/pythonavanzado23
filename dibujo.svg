@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="dibujo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.9825758"
+     inkscape:cx="493.19787"
+     inkscape:cy="320.8636"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1"
+       markerWidth="4.0606604"
+       markerHeight="6.7071066"
+       viewBox="0 0 4.0606602 6.7071068"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         id="path5057"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#000080;stroke:#020202;stroke-width:0.865;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       d="M 146.37097,75.048387 V 93.41129"
+       id="path5308" />
+    <path
+       style="fill:#000080;stroke:#020202;stroke-width:0.865;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       d="M 156.92742,93.806687 V 75.443784"
+       id="path6021" />
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       id="rect111"
+       width="50.558132"
+       height="13.549079"
+       x="63.354488"
+       y="46.669044"
+       ry="4.0772696" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#ffffff;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       x="65.738113"
+       y="56.95631"
+       id="text167"><tspan
+         sodipodi:role="line"
+         id="tspan165"
+         style="fill:#ffffff;stroke:none;stroke-width:3.365"
+         x="65.738113"
+         y="56.95631">importaciones</tspan></text>
+    <rect
+       style="fill:#ff0000;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1056"
+       width="50.558132"
+       height="13.549079"
+       x="63.354488"
+       y="61.84903"
+       ry="4.0772696" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#ffffff;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       x="65.738113"
+       y="72.136299"
+       id="text1060"><tspan
+         sodipodi:role="line"
+         id="tspan1058"
+         style="fill:#ffffff;stroke:none;stroke-width:3.365"
+         x="65.738113"
+         y="72.136299">declaraciones</tspan></text>
+    <rect
+       style="fill:#ff7f2a;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1890"
+       width="50.558132"
+       height="13.549079"
+       x="63.354488"
+       y="77.53083"
+       ry="4.0772696" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#ffffff;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       x="65.738113"
+       y="87.8181"
+       id="text1894"><tspan
+         sodipodi:role="line"
+         id="tspan1892"
+         style="fill:#ffffff;stroke:none;stroke-width:3.365"
+         x="65.738113"
+         y="87.8181">funciones</tspan></text>
+    <rect
+       style="fill:#000080;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1998"
+       width="50.558132"
+       height="13.549079"
+       x="63.354488"
+       y="93.212631"
+       ry="4.0772696" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#ffffff;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       x="65.738113"
+       y="103.4999"
+       id="text2002"><tspan
+         sodipodi:role="line"
+         id="tspan2000"
+         style="fill:#ffffff;stroke:none;stroke-width:3.365"
+         x="65.738113"
+         y="103.4999">UI</tspan></text>
+    <rect
+       style="fill:#ff0000;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       id="rect5082"
+       width="50.558132"
+       height="13.549079"
+       x="126.45807"
+       y="61.84903"
+       ry="4.0772696" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#ffffff;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       x="128.84169"
+       y="72.136299"
+       id="text5086"><tspan
+         sodipodi:role="line"
+         id="tspan5084"
+         style="fill:#ffffff;stroke:none;stroke-width:3.365"
+         x="128.84169"
+         y="72.136299">cliente - python</tspan></text>
+    <rect
+       style="fill:#ff7f2a;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       id="rect5088"
+       width="33.119972"
+       height="8.405448"
+       x="135.11443"
+       y="80.039917"
+       ry="4.202724" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#ffffff;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       x="148.41409"
+       y="85.241821"
+       id="text5092"><tspan
+         sodipodi:role="line"
+         id="tspan5090"
+         style="fill:#ffffff;stroke:none;stroke-width:3.365"
+         x="148.41409"
+         y="85.241821">json</tspan></text>
+    <rect
+       style="fill:#000080;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       id="rect5094"
+       width="50.558132"
+       height="13.549079"
+       x="126.45807"
+       y="93.212631"
+       ry="4.0772696" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;white-space:pre;inline-size:0;fill:#ffffff;stroke:none;stroke-width:3.365;stroke-linecap:round;stroke-linejoin:round"
+       x="128.84169"
+       y="103.4999"
+       id="text5098"><tspan
+         id="tspan5096"
+         style="fill:#ffffff;stroke:none;stroke-width:3.365"
+         x="128.84169"
+         y="103.4999">servidor - flask</tspan></text>
+  </g>
+</svg>

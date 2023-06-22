@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO Chat Example</title>
+    <style>
+        canvas{border:1px solid black;}
+    </style>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <style>
+        *{transition:all 1s;}
+    </style>
+</head>
+<body>
+<input type="text" id="nombre">
+    <input type="color" id="color">
+  
+    <a-scene id="escena">
+        <a-assets>
+        <a-asset-item id="personaje" src="personaje.glb" shadow="receive: true;cast:true"></a-asset-item>
+      </a-assets>
+      <a-box position="-1 0.5 -3" rotation="0 0 0" color="#4CC3D9"></a-box>
+      <a-entity light="type: spot; color: #FFF; intensity: 1.0; castShadow:true;penumbra:0.6;shadowCameraVisible: true;" position="0 10 0" rotation="-90 0 0"></a-entity>
+
+      <a-plane src="grid.jpg"  shadow="receive: true;cast:true" material="repeat: 10 10" position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+        <a-entity id="rig" position="0 10 10" rotation="-45 0 0">
+          <a-entity id="camera" camera fov="90"></a-entity>
+        </a-entity>
+    </a-scene>
+    <script>
+        
+        yo = {
+            "posx":0,
+            "posy":0,
+            "nombre":"",
+            "color":"",
+            "id":Date.now(),
+            "rotz":0
+        }
+        var avance = 0.2
+        moviendo = false
+        direccion = 0
+        document.onkeydown = function(e){
+            //console.log("has pulsado una tecla")
+            //console.log(e)
+            moviendo = true
+            switch(e.key){
+                case "w":console.log("arriba");yo.posy-=avance;yo.rotz=180;break;
+                case "s":console.log("abajo");yo.posy+=avance;yo.rotz=0;break;
+                case "a":console.log("izquierda");yo.posx-=avance;yo.rotz=-90;break;
+                case "d":console.log("derecha");yo.posx+=avance;yo.rotz=90;break;
+                default:console.log("no") 
+            }   
+            
+            socket.emit('movimiento', yo);
+        }
+    </script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+      
+    const socket = io(); // Connect to the server
+
+    // Receive chat message
+    socket.on('movimiento', (msg) => { 
+        for(var i = 0;i<msg.length;i++){
+            if(document.getElementById(msg[i].id) != null){
+                document.getElementById(msg[i].id).setAttribute("position",msg[i].posx+" 1 "+msg[i].posy)
+                document.getElementById(msg[i].id).setAttribute("rotation","0 "+msg[i].rotz+" 0")
+                document.getElementById("rig").setAttribute("position",(msg[i].posx+0)+" 10 "+(msg[i].posy+10))
+            }else{
+                const scene = document.querySelector("a-scene");
+                const box = document.createElement("a-entity");
+                pos =  msg[i].posx+" 1 "+msg[i].posy
+                console.log(pos)
+                box.setAttribute("position",pos);
+                rot = "0 "+msg[i].rotz+" 0"
+                console.log(rot)
+                box.setAttribute("rotation",rot);
+                box.setAttribute("scale","0.2 0.2 0.2");
+                box.setAttribute("id", msg[i].id);
+                box.setAttribute("gltf-model", "#personaje");
+                scene.appendChild(box);
+                console.log("caja")
+            }
+        }
+        console.log(msg)
+    });
+
+    // Connection status
+    socket.on('connect', () => {
+      console.log('Connected to the server');
+    });
+
+    socket.on('disconnect', () => {
+      console.log('Disconnected from the server');
+    });
+    
+  </script>
+</body>
+</html>
